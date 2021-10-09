@@ -1,4 +1,4 @@
-package me.vlasoff.dailyplanner
+package me.vlasoff.dailyplanner.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,18 +8,14 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import me.vlasoff.dailyplanner.presentation.navigation.Navigation
 import me.vlasoff.dailyplanner.ui.theme.DailyPlannerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DailyPlannerTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
-            }
+            Navigation()
         }
     }
 }
